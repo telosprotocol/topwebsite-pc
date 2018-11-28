@@ -1,0 +1,56 @@
+
+.logo {
+    transform: none;
+    opacity: 1;
+  }
+
+  .swiper-slide-active .logo {
+    transform: none;
+    opacity: 1;
+    transition: all 0.4s ease-in-out 0.2s;
+  }
+  .title {
+    transform: none;
+    opacity: 1;
+  }
+
+  .swiper-slide-active .title {
+    transform: none;
+    opacity: 1;
+    transition: all 0.4s ease-in-out 0.2s;
+  }
+
+
+  .p1_slogen {
+    transform: none;
+    opacity: 1;
+  }
+
+  .swiper-slide-active .p1_slogen {
+    transform: none;
+    opacity: 1;
+    transition: all 0.4s ease-in-out 0.2s;
+  }
+
+  .slogen_area {
+    transform: none;
+    opacity: 1;
+  }
+
+  .swiper-slide-active .slogen_area {
+    transform: none;
+    opacity: 1;
+    transition: all 0.4s ease-in-out 0.2s;
+  }
+
+
+  .mobile {
+    transform: translateY(200px);
+    opacity: 1;
+  }
+
+  .swiper-slide-active .mobile {
+    transform: none;
+    opacity: 1;
+    transition: all 0.4s ease-in-out 0.2s;
+  }

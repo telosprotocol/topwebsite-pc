@@ -1,0 +1,336 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-Albert {
+  background-image: url(../sprites/sprite.png);
+  background-position: -154px 0px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Anchorer {
+  background-image: url(../sprites/sprite.png);
+  background-position: -770px -154px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Andy {
+  background-image: url(../sprites/sprite.png);
+  background-position: 0px -154px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Anita {
+  background-image: url(../sprites/sprite.png);
+  background-position: -154px -154px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Aries {
+  background-image: url(../sprites/sprite.png);
+  background-position: -308px 0px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Asher {
+  background-image: url(../sprites/sprite.png);
+  background-position: -308px -154px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Ashton {
+  background-image: url(../sprites/sprite.png);
+  background-position: 0px -308px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Banning {
+  background-image: url(../sprites/sprite.png);
+  background-position: -154px -308px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Bear {
+  background-image: url(../sprites/sprite.png);
+  background-position: -308px -308px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Bill {
+  background-image: url(../sprites/sprite.png);
+  background-position: -462px 0px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Bowen {
+  background-image: url(../sprites/sprite.png);
+  background-position: -462px -154px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Bright {
+  background-image: url(../sprites/sprite.png);
+  background-position: -462px -308px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Cara {
+  background-image: url(../sprites/sprite.png);
+  background-position: 0px -462px;
+  width: 150px;
+  height: 150px;
+}
+.icon-dacheng {
+  background-image: url(../sprites/sprite.png);
+  background-position: -154px -462px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Destiny {
+  background-image: url(../sprites/sprite.png);
+  background-position: -308px -462px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Dexter {
+  background-image: url(../sprites/sprite.png);
+  background-position: -462px -462px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Doris {
+  background-image: url(../sprites/sprite.png);
+  background-position: -616px 0px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Edward {
+  background-image: url(../sprites/sprite.png);
+  background-position: -616px -154px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Faker {
+  background-image: url(../sprites/sprite.png);
+  background-position: -616px -308px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Franco {
+  background-image: url(../sprites/sprite.png);
+  background-position: -616px -462px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Harry {
+  background-image: url(../sprites/sprite.png);
+  background-position: 0px -616px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Ivan {
+  background-image: url(../sprites/sprite.png);
+  background-position: -154px -616px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Jarvis {
+  background-image: url(../sprites/sprite.png);
+  background-position: -308px -616px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Jasper {
+  background-image: url(../sprites/sprite.png);
+  background-position: -462px -616px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Jenny {
+  background-image: url(../sprites/sprite.png);
+  background-position: -616px -616px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Johnny {
+  background-image: url(../sprites/sprite.png);
+  background-position: -770px 0px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Journey {
+  background-image: url(../sprites/sprite.png);
+  background-position: 0px 0px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Joy {
+  background-image: url(../sprites/sprite.png);
+  background-position: -770px -308px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Justin {
+  background-image: url(../sprites/sprite.png);
+  background-position: -770px -462px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Kael {
+  background-image: url(../sprites/sprite.png);
+  background-position: -770px -616px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Kelly {
+  background-image: url(../sprites/sprite.png);
+  background-position: 0px -770px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Kenny {
+  background-image: url(../sprites/sprite.png);
+  background-position: -154px -770px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Kris {
+  background-image: url(../sprites/sprite.png);
+  background-position: -308px -770px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Kun {
+  background-image: url(../sprites/sprite.png);
+  background-position: -462px -770px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Lauren {
+  background-image: url(../sprites/sprite.png);
+  background-position: -616px -770px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Liang {
+  background-image: url(../sprites/sprite.png);
+  background-position: -770px -770px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Locke {
+  background-image: url(../sprites/sprite.png);
+  background-position: -924px 0px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Lynch {
+  background-image: url(../sprites/sprite.png);
+  background-position: -924px -154px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Martin {
+  background-image: url(../sprites/sprite.png);
+  background-position: -924px -308px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Morgan {
+  background-image: url(../sprites/sprite.png);
+  background-position: -924px -462px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Nick {
+  background-image: url(../sprites/sprite.png);
+  background-position: -924px -616px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Nova {
+  background-image: url(../sprites/sprite.png);
+  background-position: -924px -770px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Shane {
+  background-image: url(../sprites/sprite.png);
+  background-position: 0px -924px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Shawn {
+  background-image: url(../sprites/sprite.png);
+  background-position: -154px -924px;
+  width: 150px;
+  height: 150px;
+}
+.icon-sky {
+  background-image: url(../sprites/sprite.png);
+  background-position: -308px -924px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Teresa {
+  background-image: url(../sprites/sprite.png);
+  background-position: -462px -924px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Tiger {
+  background-image: url(../sprites/sprite.png);
+  background-position: -616px -924px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Tim {
+  background-image: url(../sprites/sprite.png);
+  background-position: -770px -924px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Tiny {
+  background-image: url(../sprites/sprite.png);
+  background-position: -924px -924px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Tom {
+  background-image: url(../sprites/sprite.png);
+  background-position: -1078px 0px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Velen {
+  background-image: url(../sprites/sprite.png);
+  background-position: -1078px -154px;
+  width: 150px;
+  height: 150px;
+}
+.icon-Waiting {
+  background-image: url(../sprites/sprite.png);
+  background-position: -1078px -308px;
+  width: 150px;
+  height: 150px;
+}
+.icon-wangfeng {
+  background-image: url(../sprites/sprite.png);
+  background-position: -1078px -462px;
+  width: 150px;
+  height: 150px;
+}

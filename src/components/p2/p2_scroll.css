@@ -1,0 +1,128 @@
+.title_area {
+    transform: translateX(-300px);
+    opacity: 0;
+  }
+
+  .swiper-slide-active .title_area {
+    transform: none;
+    opacity: 1;
+    transition: all 0.4s ease-out 0.2s;
+  }
+
+
+  @keyframes bigearth {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.swiper-slide-active .big_earth {
+    animation: bigearth 0.6s ease-in-out 0.5s 1 alternate both;
+}
+
+@keyframes smallearth {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+.swiper-slide-active .small_earth {
+    animation: smallearth 0.6s ease-in-out 0.2s 1 alternate both;
+}
+
+.vpn_position {
+    transform: translate3d(100%, 0, 0);
+    opacity: 0;
+  }
+
+  .swiper-slide-active .vpn_position {
+    transform: none;
+    opacity: 1;
+    transition: all 0.5s ease-in-out 0.2s;
+  }
+
+  .VoIP_position {
+    transform: translate3d(100%, 0, 0);
+    opacity: 0;
+}
+
+.swiper-slide-active .VoIP_position {
+    transform: none;
+    opacity: 1;
+    /* transition: all 0.3s cubic-bezier(0.6, 0.2, 0.1, 1) 0.5s; */
+    transition: all 0.5s ease-in-out 0.2s;
+}
+
+.video_position {
+    transform: translate3d(100%, 0, 0);
+    opacity: 0;
+}
+
+.swiper-slide-active .video_position {
+    transform: none;
+    opacity: 1;
+    /* transition: all 0.3s cubic-bezier(0.6, 0.2, 0.1, 1) 0.6s; */
+    transition: all 0.5s ease-in-out 0.2s;
+}
+
+.storage_position {
+    transform: translate3d(100%, 0, 0);
+    opacity: 0;
+}
+
+.swiper-slide-active .storage_position {
+    transform: none;
+    opacity: 1;
+    /* transition: all 0.3s cubic-bezier(0.6, 0.2, 0.1, 1) 0.7s; */
+    transition: all 0.5s ease-in-out 0.2s;
+}
+
+.cdn_position {
+    transform: translate3d(100%, 0, 0);
+    opacity: 0;
+}
+
+.swiper-slide-active .cdn_position {
+    transform: none;
+    opacity: 1;
+    transition: all 0.5s ease-in-out 0.2s;
+}
+
+.Messaging_position {
+    transform: translate3d(100%, 0, 0);
+    opacity: 0;
+}
+
+.swiper-slide-active .Messaging_position {
+    transform: none;
+    opacity: 1;
+    transition: all 0.5s ease-in-out 0.2s;
+}
+
+.live_position {
+    transform: translate3d(100%, 0, 0);
+    opacity: 0;
+}
+
+.swiper-slide-active .live_position {
+    transform: none;
+    opacity: 1;
+    transition: all 0.5s ease-in-out 0.2s;
+}
+
+.iot_position {
+    transform: translate3d(100%, 0, 0);
+    opacity: 0;
+}
+
+.swiper-slide-active .iot_position {
+    transform: none;
+    opacity: 1;
+    transition: all 0.5s ease-in-out 0.2s;
+}
