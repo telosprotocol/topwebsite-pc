@@ -3,7 +3,7 @@
     <navbar/>
     <div class="email-input">
       <div class="wrapper">
-        <div class="warn">Please submit your email address here. We will send the link to our white paper to your email address. </div>
+        <div class="warn">Please enter your email address here. We will send the link of our Whitepaper to your inbox.  </div>
         <input type="email"  name="email" class="emailbox" placeholder="Email" v-model="email">
         <!-- <div class="warn">*A link to our whitepaper will be sent to submitted email.</div> -->
         <div class="btn-submit" @click="submitEmail">Submit</div>
@@ -101,6 +101,7 @@ export default {
         border: solid 1px #c7d9e6;
         padding-left:10px;
         outline:none;
+        font-size: 16px;
       }
       .warn{
         width:90%;

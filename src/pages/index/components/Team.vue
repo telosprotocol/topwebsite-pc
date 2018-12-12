@@ -155,6 +155,33 @@
               </li>
             </ul>
           </swiper-slide>
+          <swiper-slide>
+            <ul class="other-list">
+              <li class="other-item" v-for="item in peopleList12" :key="item.name">
+                <img :src="item.avatar" class="other-image">
+                <div class="other-name">{{item.name}}</div>
+                <div class="other-job">{{item.job}}</div>
+              </li>
+            </ul>
+          </swiper-slide>
+          <swiper-slide>
+            <ul class="other-list">
+              <li class="other-item" v-for="item in peopleList13" :key="item.name">
+                <img :src="item.avatar" class="other-image">
+                <div class="other-name">{{item.name}}</div>
+                <div class="other-job">{{item.job}}</div>
+              </li>
+            </ul>
+          </swiper-slide>
+          <swiper-slide>
+            <ul class="other-list">
+              <li class="other-item" v-for="item in peopleList14" :key="item.name">
+                <img :src="item.avatar" class="other-image">
+                <div class="other-name">{{item.name}}</div>
+                <div class="other-job">{{item.job}}</div>
+              </li>
+            </ul>
+          </swiper-slide>
           <div class="swiper-pagination"  slot="pagination"></div>
           <div class="swiper-button-prev" slot="button-prev"></div>
           <div class="swiper-button-next" slot="button-next"></div>
@@ -204,7 +231,8 @@ export default {
           prevEl: '.swiper-button-prev'
         },
         pagination: {
-          el: '.swiper-pagination'
+          el: '.swiper-pagination',
+          clickable: true
         }
       },
       peopleList1: [
@@ -280,8 +308,29 @@ export default {
       peopleList11: [
         {avatar: require('@/assets/images/otherTeam/51.png'), name: 'Dacheng Sheng', job: 'Senior Product Manager'},
         {avatar: require('@/assets/images/otherTeam/52.png'), name: 'Feng Wang', job: 'Senior Developer'},
-        {avatar: require('@/assets/images/otherTeam/53.png'), name: 'Lauren Feng', job: 'Social Media Marketing'}
-        // {avatar: require('@/assets/images/otherTeam/54.png'), name: 'Lauren Feng', job: 'Social Media Marketing'}
+        {avatar: require('@/assets/images/otherTeam/53.png'), name: 'Lauren Feng', job: 'Social Media Marketing'},
+        {avatar: require('@/assets/images/otherTeam/Roc liu@2x.png'), name: 'Roc Liu', job: 'Senior Product Manager'},
+        {avatar: require('@/assets/images/otherTeam/Angelina huang@2x.png'), name: 'Angelina Huang', job: 'Senior Test Engineer'}
+      ],
+      peopleList12: [
+        {avatar: require('@/assets/images/otherTeam/Caroline zuo@2x.png'), name: 'Caroline Zuo', job: 'Senior Test Engineer'},
+        {avatar: require('@/assets/images/otherTeam/Neville Chen@2x.png'), name: 'Neville Chen', job: 'Senior Test Engineer'},
+        {avatar: require('@/assets/images/otherTeam/Hallie Wei@2x.png'), name: 'Hallie Wei', job: 'Senior Test Engineer'},
+        {avatar: require('@/assets/images/otherTeam/Spring yan@2x.png'), name: 'Spring Yan', job: 'Test Engineer'},
+        {avatar: require('@/assets/images/otherTeam/Ariel.jin@2x.png'), name: 'Ariel Jin', job: 'Test Engineer'}
+      ],
+      peopleList13: [
+        {avatar: require('@/assets/images/otherTeam/Tory xu@2x.png'), name: 'Tory Xu', job: 'Senior iOS Develope'},
+        {avatar: require('@/assets/images/otherTeam/Seal.wu@2x.png'), name: 'Seal Wu', job: 'Senior Android Developer'},
+        {avatar: require('@/assets/images/otherTeam/Section wang@2x.png'), name: 'Section Wang', job: 'Senior iOS Developer'},
+        {avatar: require('@/assets/images/otherTeam/Bruce liu@2x.png'), name: 'Bruce Liu', job: 'Senior Web Developer'},
+        {avatar: require('@/assets/images/otherTeam/Esther Zong@2x.png'), name: 'Esther Zong', job: 'Community Manager'}
+      ],
+      peopleList14: [
+        {avatar: require('@/assets/images/otherTeam/Ernest wang@2x.png'), name: 'Ernest Wang', job: 'Senior C++ Developer'},
+        {avatar: require('@/assets/images/otherTeam/Jimmy xu@2x.png'), name: 'Jimmy Xu', job: 'Senior C++ Developer'},
+        {avatar: require('@/assets/images/otherTeam/Hank Chen@2x.png'), name: 'Hank Chen', job: 'Senior C++ Developer'},
+        {avatar: require('@/assets/images/otherTeam/Wing Liu@2x.png'), name: 'Wing Liu', job: 'Test Engineer'}
       ]
     }
   },

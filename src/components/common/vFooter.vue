@@ -3,7 +3,11 @@
     <div class="footer-area">
       <div class="copy-term">
         <div class="copy">Copyright © 2018 Telos Foundation All rights reserved</div>
-        <div class="term">Terms Of Service | Privacy Policy</div>
+        <div class="term">
+          <router-link to="/terms"  class="link-color">Terms of Service</router-link>
+          <span>|</span>
+          <router-link to="/policy" class="link-color">Privacy Policy</router-link>
+        </div>
       </div>
       <div class="emailsubmit">
         <input type="e-mail" placeholder="Enter your email" class="email-input" v-model="email" :class="{error:errEmail}">
@@ -148,11 +152,20 @@ export default {
           font-weight:400;
           line-height:17px;
           color:rgba(65,84,99,1);
+          span{
+            margin:0 5px;
+          }
+          .link-color{
+            color:rgba(65,84,99,1);
+            border-bottom: 1px solid rgba(65,84,99,1);
+            padding-bottom: 1px;
+            cursor: pointer;
+          }
         }
       }
       .emailsubmit{
         float: left;
-        margin-top:41px;
+        margin-top:26px;
         text-align: left;
         width:431px;
         .email-input{

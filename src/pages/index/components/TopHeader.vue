@@ -18,7 +18,6 @@
           </ul>
         </li>
         <li class="testnet" @click="OpenEvent()">EVENT</li>
-        <li class="testnet" @click="OpenAmbassador()">AMBASSADORS</li>
         <!--<li class="testnet" @mouseenter="showAmbassador" @mouseleave="hideAmbassador">AMBASSADORS<span class="arrowdistance iconfont">&#xe615;</span>-->
           <!--<ul class="entry whitelist" v-if="showAmbassadors">-->
             <!--<li class="testnet-item" @click="OpenAmbassador()">AMBASSADORS</li>-->
@@ -30,17 +29,19 @@
             <li class="testnet-item" @click="OpenPDF()">EXECUTIVE &nbsp;SUMMARY</li>
           </ul>
         </li>
-        <li class="testnet" @mouseenter="showTestnet" @mouseleave="hideTestnet" @click="OpenTestnet()" >TESTNET<span class="arrowdistance iconfont">&#xe615;</span>
+        <li class="testnet" @mouseenter="showTestnet" @mouseleave="hideTestnet">TESTNET<span class="arrowdistance iconfont">&#xe615;</span>
           <ul class="entry testnetlist" v-if="showTest">
-            <li class="testnet-item" @click="OpenTestBounty()">TESTNET BOUNTY</li>
-            <li class="testnet-item" @click="OpenTestnet()">TOP TESTNET</li>
-            <li class="testnet-item" @click="OpenWallet()">WALLET</li>
-            <li class="testnet-item" @click="OpenExplorer()">EXPLORER</li>
+            <li class="testnet-item" @click="OpenTestBounty">TESTNET BOUNTY</li>
+            <li class="testnet-item" @click="OpenTestnet">TOP TESTNET</li>
+            <li class="testnet-item" @click="OpenWallet">WALLET</li>
+            <li class="testnet-item" @click="OpenExplorer">EXPLORER</li>
           </ul>
         </li>
         <li class="testnet endmargin" @mouseenter="showAbouts" @mouseleave="hideAbouts" >ABOUT<span class="arrowdistance iconfont">&#xe615;</span>
           <ul class="entry aboutlist" v-if="showAbout">
             <li class="testnet-item" @click="OpenTeam()">TEAM</li>
+            <li class="testnet-item" @click="OpenAmbassador()">AMBASSADORS</li>
+            <li class="testnet-item"><a href="https://medium.com/top-network/top-network-unveils-advisory-board-zoom-founder-eric-yuan-former-fico-ceo-mark-greene-roger-lim-6f005a135d9c" target="_blank">ADVISORS</a></li>
             <li class="testnet-item" @click="OpenFAQ()">FAQ</li>
           </ul>
         </li>
@@ -51,16 +52,18 @@
       <div class="world">World's first decentralized open communication network powered by blockchain 4.0 technology</div>
       <img src="@/assets/images/index/executive.png" class="executive" @click="OpenPDF()">
     </div> -->
-    <swiper class="swiper swiper-no-swiping" :options="swiperOption" ref="mySwiper">
-      <swiper-slide><a @click="openVideo()"><img src="@/assets/images/banner1.png"></a></swiper-slide>
-      <swiper-slide><a href="https://www.topnetwork.org/ambassador" target="_blank"><img src="@/assets/images/banner2.png"></a></swiper-slide>
-      <swiper-slide><a href="https://bitcointalk.org/index.php?topic=5070267.msg47953223#msg47953223" target="_blank"><img src="@/assets/images/banner3.png"></a></swiper-slide>
-      <swiper-slide><a href="https://www.eventbrite.com/e/wdas-x-dorahacks-hacker-arena-tickets-51641231313" target="_blank"><img src="@/assets/images/banner4.png"></a></swiper-slide>
-      <swiper-slide><a href="https://www.topnetwork.org/testnet/#/activepage" target="_blank"><img src="@/assets/images/banner5.png"></a></swiper-slide>
-      <div class="swiper-pagination"  slot="pagination"></div>
-      <!-- <div class="swiper-button-prev" slot="button-prev"></div>
-      <div class="swiper-button-next" slot="button-next"></div> -->
-    </swiper>
+    <div @mouseenter="stopSwiper" @mouseleave="startSwiper">
+      <swiper class="swiper swiper-no-swiping" :options="swiperOption" ref="mySwiper">
+        <swiper-slide><a @click="openVideo()"><img src="@/assets/images/banner1.png"></a></swiper-slide>
+        <swiper-slide><a href="https://www.topnetwork.org/ambassador" target="_blank"><img src="@/assets/images/banner2.png"></a></swiper-slide>
+        <swiper-slide><a href="https://bitcointalk.org/index.php?topic=5070267.msg47953223#msg47953223" target="_blank"><img src="@/assets/images/banner3.png"></a></swiper-slide>
+        <!-- <swiper-slide><a href="https://www.eventbrite.com/e/wdas-x-dorahacks-hacker-arena-tickets-51641231313" target="_blank"><img src="@/assets/images/banner4.png"></a></swiper-slide> -->
+        <swiper-slide><a href="https://www.topnetwork.org/testnet/#/activepage" target="_blank"><img src="@/assets/images/banner5.png"></a></swiper-slide>
+        <div class="swiper-pagination"  slot="pagination"></div>
+        <div class="swiper-button-prev" slot="button-prev" id="btn1"></div>
+        <div class="swiper-button-next" slot="button-next" id="btn2"></div>
+      </swiper>
+    </div>
     <transition name="fade">
         <div class="video_area" v-if="showBannerVideo">
           <div class="close_btn" @click="closeVideo()"></div>
@@ -94,7 +97,8 @@ export default {
           delay: 5000,
           disableOnInteraction: false// 自动切换的时间间隔，单位ms
         },
-        loop: true,
+        // loop: true,
+        effect: 'fade',
         speed: 300,
         navigation: {
           nextEl: '.swiper-button-next',
@@ -123,7 +127,26 @@ export default {
     swiperSlide,
     videoPlayer
   },
+  computed: {
+    mySwiper () {
+      return this.$refs.mySwiper.swiper
+    }
+  },
   methods: {
+    stopSwiper () {
+      var btn1 = document.getElementById('btn1')
+      var btn2 = document.getElementById('btn2')
+      btn1.style.display = 'block'
+      btn2.style.display = 'block'
+      this.mySwiper.autoplay.stop()
+    },
+    startSwiper () {
+      var btn1 = document.getElementById('btn1')
+      var btn2 = document.getElementById('btn2')
+      btn1.style.display = 'none'
+      btn2.style.display = 'none'
+      this.mySwiper.autoplay.start()
+    },
     openVideo () {
       this.showBannerVideo = true
     },
@@ -154,7 +177,7 @@ export default {
       window.open('https://bitcointalk.org/index.php?topic=5049339.msg46994432#msg46994432', '_blank')
     },
     OpenLimitedTime () {
-      window.open('https://medium.com/top-network/weekly-limited-time-bounty-offer-3-on-up-to-130-tokens-for-grab-54ffad5d033e', '_blank')
+      window.open('https://medium.com/top-network/weekly-limited-time-bounty-offer-6-on-up-to-130-tokens-for-grab-a7247324f7da', '_blank')
     },
     OpenEvent () {
       this.$ga.event('EventBtn', 'click', 'viewEvent')
@@ -164,38 +187,43 @@ export default {
       this.$ga.event('RedeemBtn', 'click', 'viewRedeem')
       this.$router.push('/redeem')
     },
-    OpenTestBounty (e) {
+    OpenTestBounty (ev) {
+      console.log(ev)
+      var e = ev.srcElement || ev.target
       if (e && e.stopPropagation) {
         e.stopPropagation()
       } else {
-        window.event.cancelBubble = true
+        e.cancelBubble = true
       }
       this.$ga.event('viewActivepage', 'click', 'activepage')
-      window.open('https://www.topnetwork.org/testnet/#/activepage', '_blank')
+      window.open('https://www.topnetwork.org/testnet/#/activepage', '_self')
     },
-    OpenTestnet (e) {
+    OpenTestnet (ev) {
+      var e = ev.srcElement || ev.target
       if (e && e.stopPropagation) {
         e.stopPropagation()
       } else {
-        window.event.cancelBubble = true
+        e.cancelBubble = true
       }
       this.$ga.event('viewTestnet', 'click', 'testnet')
       window.open('https://www.topnetwork.org/testnet/', '_self')
     },
-    OpenWallet (e) {
+    OpenWallet (ev) {
+      var e = ev.srcElement || ev.target
       if (e && e.stopPropagation) {
         e.stopPropagation()
       } else {
-        window.event.cancelBubble = true
+        e.cancelBubble = true
       }
       this.$ga.event('viewTestnet', 'click', 'wallet')
       window.open('https://www.topnetwork.org/testnet/#/testnet/wallet', '_self')
     },
-    OpenExplorer (e) {
+    OpenExplorer (ev) {
+      var e = ev.srcElement || ev.target
       if (e && e.stopPropagation) {
         e.stopPropagation()
       } else {
-        window.event.cancelBubble = true
+        e.cancelBubble = true
       }
       this.$ga.event('viewTestnet', 'click', 'explorer')
       window.open('https://www.topnetwork.org/testnet/#/testnet/explorer', '_self')
@@ -268,6 +296,10 @@ export default {
       this.$router.push({path: 'event'})
     } else if (action && action === 'ambassador') {
       this.$router.push({path: 'ambassador'})
+    } else if (action && action === 'terms') {
+      this.$router.push({path: 'terms'})
+    } else if (action && action === 'policy') {
+      this.$router.push({path: 'policy'})
     }
   }
 }

@@ -230,7 +230,7 @@ export default {
       overflow: hidden;
       .info-item{
         width:314px;
-        height: 100%;
+        // height: 100%;
         // float: left;
         transform: translate(0,0);
         // position: fixed;

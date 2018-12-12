@@ -25,6 +25,7 @@
               <span class="place">{{item.address}}</span>
             </div>
             <div class="descption-details">{{item.content}}</div>
+            <!-- <div class="descption-details">TOP Network announced the launch of Testnet at Stanford University on Oct. 16. Over 120 people, including blockchain enthusiasts, TOP community members, VCs, exchanges, corporate executives, blockchain startups and media, joined us to celebrate this crucial accomplishment. TOP Network announced the launch of Testnet at</div> -->
             <img src="@/assets/images/childrenPage/smoreDetails.png" class="moreBtn" @click="openDetail(item.url)">
           </div>
         </div>
@@ -71,7 +72,8 @@ export default {
       this.$nextTick(() => {
         var descptions = document.getElementsByClassName('descption-details')
         for (var i = 0; i < descptions.length; i++) {
-          $clamp(descptions[i], {clamp: 4})
+          window.$clamp(descptions[i], {clamp: 4})
+          console.log(clamp)
         }
       })
     },

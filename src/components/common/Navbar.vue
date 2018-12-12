@@ -18,7 +18,7 @@
           </ul>
         </li>
         <li class="testnet" @click="OpenEvent()">EVENT</li>
-        <li class="testnet" @click="OpenAmbassador()">AMBASSADORS</li>
+        <!-- <li class="testnet" @click="OpenAmbassador()">AMBASSADORS</li> -->
         <!--<li class="testnet" @mouseenter="showAmbassador" @mouseleave="hideAmbassador">AMBASSADORS<span class="arrowdistance iconfont">&#xe615;</span>-->
           <!--<ul class="entry whitelist" v-if="showAmbassadors">-->
             <!--<li class="testnet-item" @click="OpenAmbassador()">AMBASSADORS</li>-->
@@ -41,6 +41,8 @@
         <li class="testnet endmargin" @mouseenter="showAbouts" @mouseleave="hideAbouts" >ABOUT<span class="iconfont arrowdistance">&#xe615;</span>
           <ul class="entry aboutlist" v-if="showAbout">
             <li class="testnet-item" @click="OpenTeam()">TEAM</li>
+            <li class="testnet-item" @click="OpenAmbassador()">AMBASSADORS</li>
+            <li class="testnet-item"><a href="https://medium.com/top-network/top-network-unveils-advisory-board-zoom-founder-eric-yuan-former-fico-ceo-mark-greene-roger-lim-6f005a135d9c" target="_blank">ADVISORS</a></li>
             <li class="testnet-item" @click="OpenFAQ()">FAQ</li>
           </ul>
         </li>
@@ -91,7 +93,7 @@ export default {
       window.open('https://bitcointalk.org/index.php?topic=5049339.msg46994432#msg46994432', '_blank')
     },
     OpenLimitedTime () {
-      window.open('https://medium.com/top-network/weekly-limited-time-bounty-offer-3-on-up-to-130-tokens-for-grab-54ffad5d033e', '_blank')
+      window.open('https://medium.com/top-network/weekly-limited-time-bounty-offer-6-on-up-to-130-tokens-for-grab-a7247324f7da', '_blank')
     },
     OpenTestBounty (e) {
       if (e && e.stopPropagation) {
@@ -209,6 +211,10 @@ export default {
       this.$router.push({path: 'event'})
     } else if (action && action === 'ambassador') {
       this.$router.push({path: 'ambassador'})
+    } else if (action && action === 'terms') {
+      this.$router.push({path: 'terms'})
+    } else if (action && action === 'policy') {
+      this.$router.push({path: 'policy'})
     }
   }
 }
